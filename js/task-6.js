@@ -3,9 +3,6 @@ const createBtn = document.querySelector('[data-create]');
 const destroyBtn = document.querySelector('[data-destroy]');
 const boxesContainer = document.querySelector('#boxes');
 
-createBtn.style.backgroundColor = '#4e75ff';
-destroyBtn.style.backgroundColor = '#ff4e4e';
-
 createBtn.addEventListener('click', checkInputAmount);
 destroyBtn.addEventListener('click', destroyBoxes);
 
