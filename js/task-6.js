@@ -18,21 +18,18 @@ function checkInputAmount() {
 }
 
 function createBoxes(amount) {
+  let newBox = '';
   let newBoxSize = 30;
 
   boxesContainer.innerHTML = '';
 
   for (let i = 0; i < amount; i++) {
-    const newBox = document.createElement('div');
-
-    newBox.style.width = `${newBoxSize}px`;
-    newBox.style.height = `${newBoxSize}px`;
-    newBox.style.backgroundColor = getRandomHexColor();
-
-    boxesContainer.insertAdjacentElement('beforeend', newBox);
+    newBox += `<div style='width: ${newBoxSize}px;  height: ${newBoxSize}px; background-color: ${getRandomHexColor()}'></div>`;
 
     newBoxSize += 10;
   }
+
+  boxesContainer.innerHTML = newBox;
 }
 
 function destroyBoxes() {
